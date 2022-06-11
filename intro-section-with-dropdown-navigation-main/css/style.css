@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color:  hsl(0, 0%, 98%);
+    text-align: center;
+}
+html{
+     font-size: 18px;
+}
+body{
+    font-family: 'Epilogue', sans-serif;
+    color:  hsl(0, 0%, 8%);
+   
+  
+}
+header{
+    height: 100vh;
+}
+header nav{
+    display: none;
+}
+header .top-container {
+    display: flex;
+    align-items: center;
+    padding: 0 .75rem;
+    height: 3rem;
+   /* outline: 1px solid red; */
+}
+header .top-container #logo{
+    flex: 1;
+}
+header .top-container #menu-icon{
+    width: 1.5rem;
+}
+#header-img{
+    background-image: url(../images/image-hero-mobile.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+     
+    width: 100%;
+    max-width: 500px;
+    margin:1rem auto;
+    height: 40vh;
+}
+#hero-main-text{
+    padding: 1rem;
+   
+    max-width: 500px;
+    margin: auto;
+}
+#hero-main-text h1{
+    font-weight: 700;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+}
+#hero-main-text p{
+    color:hsl(0, 0%, 41%) ;
+    font-weight: 500;
+    font-size:.8rem ;
+    line-height: 1.5;
+}
+#hero-main-text .more-btn{
+    text-decoration: none;
+    /* font-weight: 300; */
+    color:white ;
+    background-color: hsl(0, 0%, 8%) ;
+    border-radius: 15px;
+    padding: .33rem;
+    margin: 1rem auto;
+    
+    display: block;
+    width: 9rem;
+    line-height: 1.6;
+}
+#hero-main-text #clients{
+    outline: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: baseline;
+    flex-wrap: wrap;
+    
+}
+#clients img{
+    width: 3.5rem;
+    outline: 1px solid green;
+    margin: .2rem;
+}
+.attribution{
+    font-size:.6rem;
+}
