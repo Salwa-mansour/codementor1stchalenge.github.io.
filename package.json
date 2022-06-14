@@ -1,0 +1,25 @@
+{
+  "name": "intro-section-with-dropdown-navigation-main",
+  "version": "1.0.0",
+  "description": "coding challenge form forntend menor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'yo'",
+    "life_server": "life-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salwa-mansour/codementor1stchalenge.git"
+  },
+  "keywords": [
+    "front_page",
+    "drop_down_menu",
+    "resposive"
+  ],
+  "author": "salwa mansour",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Salwa-mansour/codementor1stchalenge/issues"
+  },
+  "homepage": "https://github.com/Salwa-mansour/codementor1stchalenge#readme"
+}
