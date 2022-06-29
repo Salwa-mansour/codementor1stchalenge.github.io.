@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     background-color:  hsl(0, 0%, 98%);
-    text-align: center;
+   
 }
 html{
      font-size: 18px;
@@ -13,7 +13,7 @@ html{
 body{
     font-family: 'Epilogue', sans-serif;
     color:  hsl(0, 0%, 8%);
-   
+    /* text-align: center; */
   
 }
 header{
@@ -25,6 +25,7 @@ header nav{
 /* mobile menu styleings----------------- */
 nav ul{
     list-style: none;
+  
 }
 nav ul a{
     text-decoration: none;
@@ -32,6 +33,7 @@ nav ul a{
     display: block;
     /* outline: 1px solid red; */
     padding: .5rem;
+  
 }
 .show-nav-container #close-btn {
     position: absolute;
@@ -43,7 +45,6 @@ nav ul a{
 
 }
 .show-nav-container{
- 
     display: block;
     position: fixed;
     top: 0;
@@ -69,6 +70,39 @@ nav ul a{
  flex-direction: column;
  /* align-items: center; */
  justify-content: center;
+ padding: .75rem;
+}
+.show-nav-container #main-nav-list .menu-item.register{
+    width: 80%;
+  align-self: center;
+
+}
+.show-nav-container #main-nav-list .menu-item.register a{
+   border-radius:8% / 40%;
+   
+  border: 2px solid #403c85;
+   
+}
+.show-nav-container #main-nav-list .menu-item{
+   
+    margin: .2rem;
+}
+.show-nav-container #main-nav-list .menu-item:nth-child(5){
+    margin-bottom: 2rem;
+}
+.show-nav-container #main-nav-list .menu-item:nth-child(n+6){
+    text-align: center;
+}
+/* --------submenu stylings--------------- */
+.parent-menu.expand img{
+   transform: rotate(180deg);
+
+}
+.parent-menu.expand .drop-menu-level-1{
+    display:inline-block;
+    outline: 1px solid red;
+    margin-left: 10%;
+    width: 90%;
 }
 /* /////////////////////////end mobile menu styleings----------------- */
 header .top-container {
