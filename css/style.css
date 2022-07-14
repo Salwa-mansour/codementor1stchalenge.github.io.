@@ -57,6 +57,11 @@ nav ul a{
 .parent-menu #arrow{
     padding: 0 .25rem;
 }
+.parent-menu a 
+ {
+    /* disaple javascript trgetring for the childe elenments whet the link clicked ->just target the perent elemnt */
+    pointer-events: none;
+}
 .drop-menu-level-1{
     display: none;
 }
@@ -72,18 +77,18 @@ nav ul a{
  justify-content: center;
  padding: .75rem;
 }
-.show-nav-container #main-nav-list .menu-item.register{
+ #main-nav-list .menu-item.register{
     width: 80%;
   align-self: center;
 
 }
-.show-nav-container #main-nav-list .menu-item.register a{
+ #main-nav-list .menu-item.register a{
    border-radius:8% / 40%;
    
   border: 2px solid #403c85;
    
 }
-.show-nav-container #main-nav-list .menu-item{
+ #main-nav-list .menu-item{
    
     margin: .2rem;
 }
@@ -100,11 +105,46 @@ nav ul a{
 }
 .parent-menu.expand .drop-menu-level-1{
     display:inline-block;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     margin-left: 10%;
     width: 90%;
 }
-/* /////////////////////////end mobile menu styleings----------------- */
+
+/* -----------------------desctop menu stylings--------------------- */
+@media (min-width: 30em)
+{
+   #header-nav{
+      display: block;
+    }
+   #menu-icon
+   ,#close-btn{
+        display: none;
+    }
+    #main-nav-list{
+       
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .parent-menu {
+        position: relative;
+      
+    }
+    .parent-menu a{
+      
+        display: flex;
+        align-items: baseline;
+    }
+    .drop-menu-level-1{
+        position: absolute;
+        top:2rem;
+        left:20%;
+        width: 8rem;
+        box-shadow: 1px 1px 10px gray;
+        border-radius: 3px;
+    }
+}
+/* --------------------------------------------- */
 header .top-container {
     display: flex;
     align-items: center;
