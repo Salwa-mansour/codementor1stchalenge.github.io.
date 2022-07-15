@@ -6,12 +6,6 @@ let mainMenu = document.getElementById("header-nav");
 let subMenuLinks = document.getElementsByClassName("parent-menu")
 let submenulinksArr = Array.from(subMenuLinks)
 
-closeButton.addEventListener("click", closeMenu);
-openButton.addEventListener("click", openMenu);
-mainMenu.addEventListener("click", outsideClickmenuColse)
-//submenulinksArr.forEach(element => element.addEventListener("click", toggleSubMenu));
-mainMenu.addEventListener("click", toggleSubMenu);
-
 function closeMenu() {
     mainMenu.classList.remove("show-nav-container")
 
@@ -74,4 +68,25 @@ const onClickOutside = (e) => {
         submenulinksArr.forEach(element => element.classList.remove("expand"))
     }
 };
-window.addEventListener("click", onClickOutside);
+
+
+var deviceWidth = document.documentElement.clientWidth;
+window.addEventListener("orientationchange", function () {
+
+    deviceWidth = document.documentElement.clientWidth;
+    setNewListers()
+})
+
+function setNewListers() {
+    if (deviceWidth <= 800) {
+        window.addEventListener("click", onClickOutside);
+
+        closeButton.addEventListener("click", closeMenu);
+        openButton.addEventListener("click", openMenu);
+        mainMenu.addEventListener("click", outsideClickmenuColse)
+        //submenulinksArr.forEach(element => element.addEventListener("click", toggleSubMenu));
+        mainMenu.addEventListener("click", toggleSubMenu);
+
+    }
+}
+setNewListers()
