@@ -1,5 +1,6 @@
 //toggle classes expand(for submenu),and show-nav-container(for mobile menu)
 //close button ,open button, menu ,submenu
+console.log("hou")
 let closeButton = document.getElementById("close-btn");
 let openButton = document.getElementById("menu-icon");
 let mainMenu = document.getElementById("header-nav");
@@ -24,7 +25,7 @@ function outsideClickmenuColse(e) {
 }
 
 function toggleSubMenu(e) {
-
+    var deviceWidth = document.documentElement.clientWidth;
     //     menuItem=e.target;
     //       const allItems=Array.from(
     //         menuItem.parentElement.children
@@ -38,16 +39,18 @@ function toggleSubMenu(e) {
     //         menuItem.classList.add("expand")
     //         console.log("shoud idd")
     //     }
-    const clickeditem = e.target
-    clickeditem.classList.toggle("expand")
-    const allItems = Array.from(
-        clickeditem.parentElement.children
-    )
-    allItems.forEach(function (item) {
-        if (item != clickeditem) {
-            item.classList.remove("expand")
-        }
-    })
+    if (deviceWidth <= 800) {
+        const clickeditem = e.target
+        clickeditem.classList.toggle("expand")
+        const allItems = Array.from(
+            clickeditem.parentElement.children
+        )
+        allItems.forEach(function (item) {
+            if (item != clickeditem) {
+                item.classList.remove("expand")
+            }
+        })
+    }
 }
 // -------------------------------
 //const target = document.querySelector('#myTarget')//subMenuLinks
@@ -70,15 +73,15 @@ const onClickOutside = (e) => {
 };
 
 
-var deviceWidth = document.documentElement.clientWidth;
-window.addEventListener("orientationchange", function () {
+//var deviceWidth = document.documentElement.clientWidth;
+//window.addEventListener("orientationchange", function () {
 
-    deviceWidth = document.documentElement.clientWidth;
-    setNewListers()
-})
+//    deviceWidth = document.documentElement.clientWidth;
+//    setNewListers()
+//})
 
 function setNewListers() {
-    if (deviceWidth <= 800) {
+//    if (deviceWidth <= 800) {
         window.addEventListener("click", onClickOutside);
 
         closeButton.addEventListener("click", closeMenu);
@@ -87,6 +90,6 @@ function setNewListers() {
         //submenulinksArr.forEach(element => element.addEventListener("click", toggleSubMenu));
         mainMenu.addEventListener("click", toggleSubMenu);
 
-    }
+    //}
 }
 setNewListers()
